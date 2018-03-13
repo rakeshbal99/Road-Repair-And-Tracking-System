@@ -17,7 +17,19 @@
         %>
         Hello, <%=uname%>
         <br>
-        <button type="button">View Area List</button> 
-        <button type="button">Update Priority Data</button> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a  href="AboutMe.html" class="dropbtn">AboutMe</a>
+                <div class="dropdown-content">
+                    <a href="AboutMe.html#Achievements">Achievements</a>
+                    <a href="AboutMe.html#Interests">Interests</a>
+                    <a href="AboutMe.html#Hobbies">Hobbies</a>
+                    <a href="AboutMe.html#Involvements">Involvements</a>
+                </div>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Feedback.html">Feedback</a></li>
+        </ul> 
     </body>
 </html>

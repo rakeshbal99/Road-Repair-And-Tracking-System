@@ -1,9 +1,10 @@
 <%-- 
     Document   : welcome
     Created on : Mar 11, 2018, 1:23:18 PM
-    Author     : americast
+    Author     : rakeshbal99
 --%>
 
+<%@page import="RRTS.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,12 +13,14 @@
         <title>Welcome!</title>
     </head>
     <body>
-        <% String uname;
-        uname = request.getParameter("uname");
-        %>
-        Hello, <%=uname%>
+        Hello, <%=User.uname%>
         <br>
-        <button type="button onclick="complaint.html">Raise Complaints</button> 
-        <button type="button">View Repair Statistics</button> 
+        <ul>
+            <li><a href="user.jsp">Home</a></li>
+            <li><a href="complaint.jsp">Complain</a></li>
+            <li><a href="repairstatistics.jsp">Repair Statistics</a></li>
+            <li><a href="profile.html">Modify Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul> 
     </body>
 </html>

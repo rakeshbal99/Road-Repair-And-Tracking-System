@@ -12,10 +12,20 @@ and open the template in the editor.
     </head>
     <body>
         <h1>Login page</h1>
-        <form action="verify.jsp" method="get">
+        <form action="userverify.jsp" method="get">
             Enter Username: <input type="text" name="uname"/><br>
             Enter Password: <input type="password" name="pwd"/><br>
-            <input type="submit"/>
+            <input type="submit" value="Login as User"/>
+        </form>
+        <form action="supervisorverify.jsp" method="get">
+            Enter Username: <input type="text" name="uname"/><br>
+            Enter Password: <input type="password" name="pwd"/><br>
+            <input type="submit" value="Login as Supervisor"/>
+        </form>
+        <form action="conductorverify.jsp" method="get">
+            Enter Username: <input type="text" name="uname"/><br>
+            Enter Password: <input type="password" name="pwd"/><br>
+            <input type="submit" value="Login as Conductor"/>
         </form>
     </body>
 </html>

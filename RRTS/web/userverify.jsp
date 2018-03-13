@@ -3,7 +3,7 @@
     Created on : Mar 11, 2018, 1:14:01 PM
     Author     : americast
 --%>
-
+<%@page import="RRTS.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,8 @@
         uname = request.getParameter("uname");
         pwd = request.getParameter("pwd");
         if (uname.equals("a") && pwd.equals("a"))
-        {%>
+        {
+        User.uname = uname;%>
             <jsp:forward page = "user.jsp"/>
         <%}
         else {
