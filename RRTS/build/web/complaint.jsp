@@ -12,29 +12,20 @@ and open the template in the editor.
     </head>
     <body>
         <body>
-    <form name="htmlform" method="post" action="html_form_send.php">
+    <form name="htmlform" method="post" action="updatelist.jsp">
       <table width="450px">
       </tr>
       <tr>
             <td valign="top">
-                  <label for="first_name">First Name *</label>
+                  <label for="name">Name </label>
             </td>
             <td valign="top">
-                  <input  type="text" name="first_name" maxlength="50" size="30">
-            </td>
-      </tr>
-      
-      <tr>
-            <td valign="top"">
-                  <label for="last_name">Last Name *</label>
-            </td>
-            <td valign="top">
-                  <input  type="text" name="last_name" maxlength="50" size="30">
+                  <input  type="text" name="name" maxlength="50" size="30">
             </td>
       </tr>
       <tr>
             <td valign="top">
-                  <label for="email">Email Address *</label>
+                  <label for="email">Email Address </label>
             </td>
             <td valign="top">
                   <input  type="text" name="email" maxlength="80" size="30">
@@ -43,7 +34,7 @@ and open the template in the editor.
       </tr>
       <tr>
             <td valign="top">
-                  <label for="telephone">Telephone Number *</label>
+                  <label for="telephone">Telephone Number </label>
             </td>
             <td valign="top">
                   <input  type="text" name="telephone" maxlength="30" size="30">
@@ -64,6 +55,15 @@ and open the template in the editor.
             </td>
             <td valign="top">
                   <input  type="text" name="location" maxlength="80" size="30">
+            </td>
+            
+      </tr>
+      <tr>
+            <td valign="top">
+                  <label for="area">Area *</label>
+            </td>
+            <td valign="top">
+                  <input  type="text" name="area" maxlength="80" size="30">
             </td>
             
       </tr>
