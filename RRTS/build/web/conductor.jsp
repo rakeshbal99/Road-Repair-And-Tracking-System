@@ -17,7 +17,8 @@
         <br>
         <ul>
             <li><a href="conductor.jsp">Home</a></li>
-            <li><a href="complaintlist.jsp">Complaint List</a></li>
+            <li><a href="repairSchedule.jsp">Repair Schedule</a></li>
+            <li><a href="updateResources.jsp">Update Resources</a></li>
             <li><a href="repairstatistics.jsp">Repair Statistics</a></li>
             <li><a href="profile.html">Modify Profile</a></li>
             <li><a href="logout.html">Logout</a></li>

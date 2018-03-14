@@ -24,6 +24,6 @@
         }
    }
    catch(Exception e){       
-       out.println("Something went wrong !! Please try again");       
+       out.println("Something went wrong !! Please try again"+e);       
    }      
 %>

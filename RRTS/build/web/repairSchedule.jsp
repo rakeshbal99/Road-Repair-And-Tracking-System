@@ -18,21 +18,29 @@
                 PreparedStatement pst2 = conn.prepareStatement("SELECT * FROM RESOURCES");
                 ResultSet rs2 = pst2.executeQuery();
                 rs2.next();
+                int CEMENT = rs2.getInt("CEMENT");   
+                int SAND = rs2.getInt("SAND_TRIPS");
+                int WATER = rs2.getInt("WATER");
+                int LABOURERS = rs2.getInt("LABOURERS");
+                out.println("Repair Schedule is :");
                 while(rs.next()){
-                    if(pst2>)
-                    String Name = rs.getString("Name");   
-                    String Email = rs.getString("Email");
-                    String RoadName = rs.getString("Roadname");
-                    String Area = rs.getString("Area");   
-                    String Location = rs.getString("Location");
-                    String Telephone = rs.getString("Telephone");
-                    String Description = rs.getString("Description");
-                    String Comments = rs.getString("Comments");
+                    String AREA = rs.getString("Area");
+                    int CEMENT_R = rs.getInt("CEMENT");   
+                    int SAND_R = rs.getInt("SAND_TRIPS");
+                    int WATER_R = rs.getInt("WATER");
+                    int LABOURERS_R = rs.getInt("LABOURERS");   
                     int ComplaintID = rs.getInt("ComplaintID");
-                    out.println("Name: "+Name+"\t Email: "+Email+"\t Telephone: "+
-                        Telephone+"\t Road Name: "+RoadName+"\t Area: "+Area+
-                        "\t Location: "+Location+"\t Description: "+Description+
-                        "\t Comments: "+Comments+"\t ComplaintID: "+ComplaintID);
+                      
+                    if((CEMENT_R<= CEMENT) && (SAND_R<= SAND) && (WATER_R<= WATER) && (LABOURERS_R<=LABOURERS)){
+                        CEMENT-=CEMENT_R;
+                        SAND-= SAND_R;
+                        WATER-= WATER_R;
+                        LABOURERS-= LABOURERS_R;
+                        out.println("\n ComplaintID: "+ComplaintID+"\t AREA:"+AREA+"\t CEMENT: "+CEMENT_R+"\t SAND_TRIPS :"+SAND_R+"\t WATER: "+WATER_R+"\t LABOURERS: "+LABOURERS_R);
+                    }
+                    else{
+                        break;
+                    }
                      
         %><br><%
                     

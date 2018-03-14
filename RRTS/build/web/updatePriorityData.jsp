@@ -12,7 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <body>
-    <form name="htmlform" method="post" action="addpriority.jsp">
+    <form name="htmlform" method="post" action="addPriorityData.jsp">
       <table width="450px">
       <tr>
             <td valign="top">

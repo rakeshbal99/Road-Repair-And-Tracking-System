@@ -12,7 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <body>
-    <form name="htmlform" method="post" action="addcomplaint.jsp">
+    <form name="htmlform" method="post" action="addComplaint.jsp">
       <table width="450px">
       </tr>
       <tr>

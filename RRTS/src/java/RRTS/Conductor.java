@@ -11,5 +11,4 @@ package RRTS;
  */
 public class Conductor {
     public static String uname;
-    public static int ComplaintID;
 }
