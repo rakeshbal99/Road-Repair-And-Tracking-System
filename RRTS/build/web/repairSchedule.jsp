@@ -5,18 +5,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Update case</title>
+        <title>Repair Schedule</title>
     </head>
     <body>
         <%
             try {   
                 Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
                 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510");
-                PreparedStatement pst = conn.prepareStatement("Select * from COMPLAINTS where Area=?;");
+                PreparedStatement pst = conn.prepareStatement("SELECT * FROM PRIORITY ORDER BY PRIORITY_ORDER DESC;");
                 //PreparedStatement pst = conn.prepareStatement("Select * from COMPLAINTS;");
-                pst.setString(1, Supervisor.area);
                 ResultSet rs = pst.executeQuery();
+                PreparedStatement pst2 = conn.prepareStatement("SELECT * FROM RESOURCES");
+                ResultSet rs2 = pst2.executeQuery();
+                rs2.next();
                 while(rs.next()){
+                    if(pst2>)
                     String Name = rs.getString("Name");   
                     String Email = rs.getString("Email");
                     String RoadName = rs.getString("Roadname");

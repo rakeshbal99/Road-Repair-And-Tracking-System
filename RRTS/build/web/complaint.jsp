@@ -12,7 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <body>
-    <form name="htmlform" method="post" action="updatelist.jsp">
+    <form name="htmlform" method="post" action="addcomplaint.jsp">
       <table width="450px">
       </tr>
       <tr>
@@ -87,7 +87,7 @@ and open the template in the editor.
       </tr>
       <tr>
             <td colspan="2" style="text-align:center">
-                  <input type="submit" value="Submit">   ( <a href="http://www.freecontactform.com/html_form.php">HTML Form</a> )
+                  <input type="submit" value="Submit">   ( HTML Form )
             </td>
       </tr>
 </table>

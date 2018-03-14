@@ -13,14 +13,15 @@
         <title>Welcome!</title>
     </head>
     <body>
-        Hello, <%=User.uname%>
+        Hello, <%=Conductor.uname%>
         <br>
         <ul>
-            <li><a href="user.jsp">Home</a></li>
-            <li><a href="complaint.jsp">Complain</a></li>
+            <li><a href="conductor.jsp">Home</a></li>
+            <li><a href="complaintlist.jsp">Complaint List</a></li>
             <li><a href="repairstatistics.jsp">Repair Statistics</a></li>
             <li><a href="profile.html">Modify Profile</a></li>
-            <li><a href="logout.jsp">Logout</a></li>
+            <li><a href="logout.html">Logout</a></li>
         </ul> 
     </body>
 </html>
+

@@ -6,15 +6,15 @@
         String Password = request.getParameter("pwd");
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510");    
-        PreparedStatement pst = conn.prepareStatement("Select Username,Password,Area from SUPERVISOR where Username=? and Password=?");
+        PreparedStatement pst = conn.prepareStatement("Select Username,Password,ComplaintID from CONDUCTOR where Username=? and Password=?;");
         pst.setString(1, Username);
         pst.setString(2, Password);
         ResultSet rs = pst.executeQuery();                        
         if(rs.next()) {          
-           out.println("Valid login credentials");
-           Supervisor.area= rs.getString("Area");
-           Supervisor.uname = Username;%>
-            <jsp:forward page = "supervisor.jsp"/>
+           out.println("Valid login credentials"); 
+           Conductor.ComplaintID = rs.getInt("ComplaintID");
+           Conductor.uname = Username;%>
+            <jsp:forward page = "conductor.jsp"/>
         <%
         }
         else {
@@ -25,6 +25,6 @@
         }
    }
    catch(Exception e){       
-       out.println("Something went wrong !! Please try again");       
+       out.println("Something went wrong !! Please try again"+e);       
    }      
 %>

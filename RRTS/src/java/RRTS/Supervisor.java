@@ -11,4 +11,5 @@ package RRTS;
  */
 public class Supervisor {
     public static String uname;
+    public static String area;
 }

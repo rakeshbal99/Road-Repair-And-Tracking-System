@@ -1,29 +1,29 @@
-<%-- 
-    Document   : verify
-    Created on : Mar 11, 2018, 1:14:01 PM
-    Author     : americast
---%>
 <%@page import="RRTS.*"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <%! String uname, pwd; %>
-        <%
-        uname = request.getParameter("uname");
-        pwd = request.getParameter("pwd");
-        if (uname.equals("a") && pwd.equals("a"))
-        {
-        User.uname = uname;%>
+<%@ page import ="java.sql.*" %>
+<%
+    try{
+        String Username = request.getParameter("uname");   
+        String Password = request.getParameter("pwd");
+        Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510");    
+        PreparedStatement pst = conn.prepareStatement("Select Username,Password from USER where Username=? and Password=?");
+        pst.setString(1, Username);
+        pst.setString(2, Password);
+        ResultSet rs = pst.executeQuery();                        
+        if(rs.next()) {          
+           out.println("Valid login credentials"); 
+           User.uname = Username;%>
             <jsp:forward page = "user.jsp"/>
-        <%}
+        <%
+        }
         else {
-            %>Authentication failure.
+           out.println("Invalid login credentials");
+           %>Authentication failure.
             <jsp:include page = "index.html"/>
-       <%}%>
-    </body>
-</html>
+            <%
+        }
+   }
+   catch(Exception e){       
+       out.println("Something went wrong !! Please try again");       
+   }      
+%>
