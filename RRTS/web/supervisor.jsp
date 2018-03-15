@@ -18,10 +18,10 @@
         <ul>
             <li><a href="supervisor.jsp">Home</a></li>
             <li><a href="complaintlist.jsp">Complaint List</a></li>
-            <li><a href="updatePriorityData.jsp">Priority List</a></li>
+            <li><a href="updatePriorityData.jsp">Update Priority Data</a></li>
             <li><a href="repairSchedule.jsp">Repair Schedule</a></li>
-            <li><a href="repairstatistics.jsp">Repair Statistics</a></li>
-            <li><a href="profile.html">Modify Profile</a></li>
+            <li><a href="repairStatistics.jsp">Repair Statistics</a></li>
+            <li><a href="chgPwdSupervisor.jsp">Change Password</a></li>
             <li><a href="logout.jsp">Logout</a></li>
         </ul> 
     </body>

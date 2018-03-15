@@ -23,6 +23,7 @@
                 int WATER = rs2.getInt("WATER");
                 int LABOURERS = rs2.getInt("LABOURERS");
                 out.println("Repair Schedule is :");
+                %><br><%
                 while(rs.next()){
                     String AREA = rs.getString("Area");
                     int CEMENT_R = rs.getInt("CEMENT");   

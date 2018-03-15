@@ -14,9 +14,11 @@
         PreparedStatement pst = conn.prepareStatement("insert into PRIORITY values ("+PRIORITY_ORDER+","+CEMENT+","+SAND_TRIPS+","+WATER+","+LABOURERS+","+ComplaintID+",\'"+Area+"\');");
         pst.executeUpdate();  
         out.println("Priority Data Updated");
+        %><li><a href="supervisor.jsp">Home</a></li><%
         
    }
    catch(Exception e){       
        out.println("Something went wrong !! Please try again");       
    }      
 %>
+

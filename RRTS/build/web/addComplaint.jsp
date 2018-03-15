@@ -18,7 +18,8 @@
         int ComplaintID = rs.getInt("ComplaintID");
         pst = conn.prepareStatement("insert into COMPLAINTS values (\'"+Name+"\',\'"+Email+"\',\'"+RoadName+"\',\'"+Area+"\',\'"+Location+"\',\'"+Telephone+"\',\'"+Description+"\',\'"+Comments+"\',"+(ComplaintID+1)+");");
         pst.executeUpdate();  
-        out.println("Complaint Lodged. Thanks a lot for informing us");
+        out.println("Complaint Lodged. Thanks a lot for informing us. The ComplaintID is:"+(ComplaintID+1));
+        %><li><a href="user.jsp">Home</a></li><%
         
    }
    catch(Exception e){       

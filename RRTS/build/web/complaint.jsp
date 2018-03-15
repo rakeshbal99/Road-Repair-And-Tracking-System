@@ -14,7 +14,6 @@ and open the template in the editor.
         <body>
     <form name="htmlform" method="post" action="addComplaint.jsp">
       <table width="450px">
-      </tr>
       <tr>
             <td valign="top">
                   <label for="name">Name </label>
@@ -45,7 +44,7 @@ and open the template in the editor.
                   <label for="roadname">Road Name *</label>
             </td>
             <td valign="top">
-                  <input  type="text" name="roadname" maxlength="80" size="30">
+                  <input  type="text" name="roadname" maxlength="80" size="30" required>
             </td>
             
       </tr>
@@ -54,7 +53,7 @@ and open the template in the editor.
                   <label for="location">Road Damage Location/Landmark *</label>
             </td>
             <td valign="top">
-                  <input  type="text" name="location" maxlength="80" size="30">
+                  <input  type="text" name="location" maxlength="80" size="30" required>
             </td>
             
       </tr>
@@ -63,7 +62,7 @@ and open the template in the editor.
                   <label for="area">Area *</label>
             </td>
             <td valign="top">
-                  <input  type="text" name="area" maxlength="80" size="30">
+                  <input  type="text" name="area" maxlength="80" size="30" required>
             </td>
             
       </tr>
@@ -72,7 +71,7 @@ and open the template in the editor.
                   <label for="description">Description *</label>
             </td>
             <td valign="top">
-                  <textarea  name="description" maxlength="1000" cols="50" rows="6"></textarea>
+                  <textarea  name="description" maxlength="1000" cols="50" rows="6" required></textarea>
             </td>
             
       </tr>
@@ -81,7 +80,7 @@ and open the template in the editor.
                   <label for="comments">Comments *</label>
             </td>
             <td valign="top">
-                  <textarea  name="comments" maxlength="1000" cols="50" rows="6"></textarea>
+                  <textarea  name="comments" maxlength="1000" cols="50" rows="6" required></textarea>
             </td>
             
       </tr>

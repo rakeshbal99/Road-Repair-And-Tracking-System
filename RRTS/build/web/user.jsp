@@ -18,8 +18,8 @@
         <ul>
             <li><a href="user.jsp">Home</a></li>
             <li><a href="complaint.jsp">Complain</a></li>
-            <li><a href="repairstatistics.jsp">Repair Statistics</a></li>
-            <li><a href="profile.html">Modify Profile</a></li>
+            <li><a href="repairStatistics.jsp">Repair Statistics</a></li>
+            <li><a href="chgPwdUser.jsp">Change Password</a></li>
             <li><a href="logout.jsp">Logout</a></li>
         </ul> 
     </body>
