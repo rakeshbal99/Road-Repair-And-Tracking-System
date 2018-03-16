@@ -6,90 +6,44 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="form.css">
         <title>Complaint Portal</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <body>
-    <form name="htmlform" method="post" action="addComplaint.jsp">
-      <table width="450px">
-      <tr>
-            <td valign="top">
-                  <label for="name">Name </label>
-            </td>
-            <td valign="top">
-                  <input  type="text" name="name" maxlength="50" size="30">
-            </td>
-      </tr>
-      <tr>
-            <td valign="top">
-                  <label for="email">Email Address </label>
-            </td>
-            <td valign="top">
-                  <input  type="text" name="email" maxlength="80" size="30">
-            </td>
-            
-      </tr>
-      <tr>
-            <td valign="top">
-                  <label for="telephone">Telephone Number </label>
-            </td>
-            <td valign="top">
-                  <input  type="text" name="telephone" maxlength="30" size="30">
-            </td>
-      </tr>
-      <tr>
-            <td valign="top">
-                  <label for="roadname">Road Name *</label>
-            </td>
-            <td valign="top">
-                  <input  type="text" name="roadname" maxlength="80" size="30" required>
-            </td>
-            
-      </tr>
-      <tr>
-            <td valign="top">
-                  <label for="location">Road Damage Location/Landmark *</label>
-            </td>
-            <td valign="top">
-                  <input  type="text" name="location" maxlength="80" size="30" required>
-            </td>
-            
-      </tr>
-      <tr>
-            <td valign="top">
-                  <label for="area">Area *</label>
-            </td>
-            <td valign="top">
-                  <input  type="text" name="area" maxlength="80" size="30" required>
-            </td>
-            
-      </tr>
-      <tr>
-            <td valign="top">
-                  <label for="description">Description *</label>
-            </td>
-            <td valign="top">
-                  <textarea  name="description" maxlength="1000" cols="50" rows="6" required></textarea>
-            </td>
-            
-      </tr>
-      <tr>
-            <td valign="top">
-                  <label for="comments">Comments *</label>
-            </td>
-            <td valign="top">
-                  <textarea  name="comments" maxlength="1000" cols="50" rows="6" required></textarea>
-            </td>
-            
-      </tr>
-      <tr>
-            <td colspan="2" style="text-align:center">
-                  <input type="submit" value="Submit">   ( HTML Form )
-            </td>
-      </tr>
-</table>
-</form>
+    <body bgcolor="#e9faff">
+    <div class="container">  
+      <form id="contact" action="addComplaint.jsp" method="post">
+        <h3>Add Complaint</h3>
+        <fieldset>
+          <input placeholder="Name(optional)" type="text" name="name" tabindex="1" autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Email Address(optional)" type="text" name="email" tabindex="2" >
+        </fieldset>
+        <fieldset>
+          <input placeholder="Phone Number (optional)" type="tel" tabindex="3">
+        </fieldset>
+        <fieldset>
+          <input placeholder="Road Name" type="text" name="roadname" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Road Damage Location/Landmark" type="text" name="location" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Area" type="text" name="area" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <textarea placeholder="Descirption" name= "description" tabindex="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+          <textarea placeholder="Comments" name= "comments" tabindex="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+    </div>
 </body>
 </html>

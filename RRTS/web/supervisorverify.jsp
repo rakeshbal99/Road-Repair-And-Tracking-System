@@ -2,8 +2,8 @@
 <%@ page import ="java.sql.*" %>
 <%
     try{
-        String Username = request.getParameter("uname");   
-        String Password = request.getParameter("pwd");
+        String Username = request.getParameter("unames");   
+        String Password = request.getParameter("pwds");
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510");    
         PreparedStatement pst = conn.prepareStatement("Select Username,Password,Area from SUPERVISOR where Username=? and Password=?");

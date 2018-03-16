@@ -9,20 +9,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome!</title>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="script.js"></script>
+        <title>Welcome Supervisor!</title>
     </head>
-    <body>
-        Hello, <%=Supervisor.uname%>
+    <body bgcolor="#e9faff">
+        <div id='cssmenu'>
+            <ul>
+               <li class='active'><a href="supervisor.jsp"><span>Home</span></a></li>
+               <li><a href="complaintlist.jsp"><span>Complaint List</span></a></li>
+               <li><a href="updatePriorityData.jsp"><span>Update Priority Data</span></a></li>
+               <li><a href="repairSchedule.jsp"><span>Repair Schedule</span></a></li>
+               <li><a href="repairStatistics.jsp"><span>Repair Statistics</span></a></li>
+               <li><a href="chgPwdSupervisor.jsp"><span>Change Password</span></a></li>
+               <li class='last'><a href="logout.jsp"><span>Logout</span></a></li>
+            </ul>
+        </div>
+
         <br>
-        <ul>
-            <li><a href="supervisor.jsp">Home</a></li>
-            <li><a href="complaintlist.jsp">Complaint List</a></li>
-            <li><a href="updatePriorityData.jsp">Update Priority Data</a></li>
-            <li><a href="repairSchedule.jsp">Repair Schedule</a></li>
-            <li><a href="repairStatistics.jsp">Repair Statistics</a></li>
-            <li><a href="chgPwdSupervisor.jsp">Change Password</a></li>
-            <li><a href="logout.jsp">Logout</a></li>
-        </ul> 
+        <br>
+        <br>
+        <center><h2>Hello, <%=Supervisor.uname%></h2></center>
     </body>
 </html>

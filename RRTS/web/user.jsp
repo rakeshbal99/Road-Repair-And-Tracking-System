@@ -9,18 +9,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome!</title>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="script.js"></script>
+        <title>Welcome User!</title>
     </head>
-    <body>
-        Hello, <%=User.uname%>
+    <body bgcolor="#e9faff">
+        <div id='cssmenu'>
+            <ul>
+               <li class='active'><a href="user.jsp"><span>Home</span></a></li>
+               <li><a href="complaint.jsp"><span>Complain</span></a></li>
+               <li><a href="repairStatistics.jsp"><span>Repair Statistics</span></a></li>
+               <li><a href="chgPwdUser.jsp"><span>Change Password</span></a></li>
+               <li class='last'><a href="logout.jsp"><span>Logout</span></a></li>
+            </ul>
+        </div>
+
         <br>
-        <ul>
-            <li><a href="user.jsp">Home</a></li>
-            <li><a href="complaint.jsp">Complain</a></li>
-            <li><a href="repairStatistics.jsp">Repair Statistics</a></li>
-            <li><a href="chgPwdUser.jsp">Change Password</a></li>
-            <li><a href="logout.jsp">Logout</a></li>
-        </ul> 
+        <br>
+        <br>
+        <center><h2>Hello, <%=User.uname%></h2></center>
     </body>
 </html>
