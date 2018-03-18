@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Repair Statistics</title>
     </head>
-    <body>
+    <body bgcolor="#e9faff">
         <%
             try {   
                 Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
