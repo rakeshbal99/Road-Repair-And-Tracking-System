@@ -1,3 +1,5 @@
+<%@page import="java.io.FileWriter"%>
+<%@page import="java.io.BufferedWriter"%>
 <%@page import="RRTS.*"%>
 <%@ page import ="java.sql.*" %>
 <%
@@ -12,14 +14,23 @@
         ResultSet rs = pst.executeQuery();                        
         if(rs.next()) {          
            out.println("Valid login credentials"); 
-           Conductor.uname = Username;%>
+           Conductor.uname = Username;
+           out.println(Username);
+            BufferedWriter writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/username.txt"));
+            writer.write(Conductor.uname);
+            writer.flush();
+            writer.close();
+            writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/status.txt"));
+            writer.write("logged in");
+            writer.flush();
+            writer.close();%>
             <jsp:forward page = "conductor.jsp"/>
         <%
         }
         else {
            out.println("Invalid login credentials");
            %>Authentication failure.
-            <jsp:include page = "index.html"/>
+            <jsp:include page = "index.jsp"/>
             <%
         }
    }

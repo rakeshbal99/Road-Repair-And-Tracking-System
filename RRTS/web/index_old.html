@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,20 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+    <%@page import="java.io.FileWriter"%>
+    <%@page import="java.io.BufferedWriter"%>
+    <%
+        BufferedWriter writer = new BufferedWriter(new FileWriter("/RRTS/status.txt"));
+        writer.write("logged out");
+        writer.flush();
+        writer.close();
+
+        writer = new BufferedWriter(new FileWriter("/RRTS/username.txt"));
+        writer.write("null");
+        writer.flush();
+        writer.close();
+
+        %>    
     <center><h1>Road Repair And Tracking System</h1></center>
 
 	<div class="limiter">

@@ -13,7 +13,7 @@
         User.uname = null;
         Conductor.uname = null;
         Supervisor.area = null;%>
-        <jsp:include page = "index.html"/>
+        <jsp:include page = "index.jsp"/>
     </body>
 </html>
 

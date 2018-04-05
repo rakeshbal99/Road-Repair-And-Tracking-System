@@ -4,7 +4,7 @@
 
 <% if (Supervisor.uname==null) {
     %>
-    <jsp:forward page = "index.html"/>
+    <jsp:forward page = "index.jsp"/>
     <%}%>
 <!DOCTYPE html>
 <html>

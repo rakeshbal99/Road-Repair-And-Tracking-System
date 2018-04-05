@@ -1,5 +1,7 @@
 <%@page import="RRTS.*"%>
 <%@ page import ="java.sql.*" %>
+<%@page import="java.io.FileWriter"%>
+<%@page import="java.io.BufferedWriter"%>
 <%
     try{
         String Username = request.getParameter("uname");   
@@ -12,14 +14,23 @@
         ResultSet rs = pst.executeQuery();                        
         if(rs.next()) {          
            out.println("Valid login credentials"); 
-           User.uname = Username;%>
+           User.uname = Username;
+           out.println(Username);
+            BufferedWriter writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/username.txt"));
+            writer.write(User.uname);
+            writer.flush();
+            writer.close();
+            writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/status.txt"));
+            writer.write("logged in");
+            writer.flush();
+            writer.close();%>
             <jsp:forward page = "user.jsp"/>
         <%
         }
         else {
            out.println("Invalid login credentials");
            %>Authentication failure.
-            <jsp:include page = "index.html"/>
+            <jsp:include page = "index.jsp"/>
             <%
         }
    }
