@@ -1,3 +1,5 @@
+<%@page import="java.io.FileWriter"%>
+<%@page import="java.io.BufferedWriter"%>
 <%@page import="RRTS.*"%>
 <%@ page import ="java.sql.*" %>
 <%
@@ -9,7 +11,37 @@
         String Location = request.getParameter("location");
         String Telephone = request.getParameter("telephone");
         String Description = request.getParameter("description");
-        String Comments = request.getParameter("comments"); 
+        String Comments = request.getParameter("comments");
+        Complain.Area = Area;
+        Complain.Comments = Comments;
+        Complain.Location = Location;
+        Complain.Telephone = Telephone;
+        Complain.Description = Description;
+        BufferedWriter writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/Location.txt"));
+        writer.write(Location);
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/Telephone.txt"));
+        writer.write(Telephone);
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/Description.txt"));
+        writer.write(Description);
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/Comments.txt"));
+        writer.write(Comments);
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/Area.txt"));
+        writer.write(Area);
+        writer.flush();
+        writer.close();
+        
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510");    
         PreparedStatement pst = conn.prepareStatement("SELECT * FROM COMPLAINTS ORDER BY ComplaintID DESC LIMIT 1;");

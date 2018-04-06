@@ -14,6 +14,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.sql.*;
 
 /**
  *
@@ -59,11 +60,21 @@ public class UserTest {
     }
     
     @Test
-    public void user() throws IOException {
+    public void user() throws IOException, ClassNotFoundException, SQLException {
         // TODO review the generated test code and remove the default call to fail.
         BufferedReader br = new BufferedReader(new FileReader("/home/rakesh/RRTS/username.txt"));
         String status = br.readLine();
         assertEquals("username", "rakesh", status);
+        
+        Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510");    
+        PreparedStatement pst = conn.prepareStatement("select Password from USER where Username='"+status+"';");
+        ResultSet rs = pst.executeQuery();
+        String pwd="";
+        if(rs.next())
+            pwd = rs.getString("Password");
+        
+        assertEquals("password", "r123", pwd);
     }
     
 }

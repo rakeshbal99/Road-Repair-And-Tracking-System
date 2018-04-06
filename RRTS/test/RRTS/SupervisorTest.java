@@ -8,6 +8,11 @@ package RRTS;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -59,20 +64,31 @@ public class SupervisorTest {
     }
     
     @Test
-    public void user() throws IOException {
+    public void user() throws IOException, SQLException {
         // TODO review the generated test code and remove the default call to fail.
         BufferedReader br = new BufferedReader(new FileReader("/home/rakesh/RRTS/username.txt"));
         String status = br.readLine();
         assertEquals("username", "Pranav", status);
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510");    
+        PreparedStatement pst = conn.prepareStatement("select Password from SUPERVISOR where Username='"+status+"';");
+        ResultSet rs = pst.executeQuery();
+        String pwd="";
+        if(rs.next())
+            pwd = rs.getString("Password");
+        
+        assertEquals("password", "P123", pwd);
     }
     
     @Test
     
-    public void area() throws IOException {
+    public void area() throws IOException, ClassNotFoundException, SQLException {
         // TODO review the generated test code and remove the default call to fail.
         BufferedReader br = new BufferedReader(new FileReader("/home/rakesh/RRTS/area.txt"));
         String status = br.readLine();
         assertEquals("username", "KGP", status);
+        Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+        
+        
     }
     
 }

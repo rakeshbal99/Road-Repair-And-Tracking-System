@@ -22,7 +22,7 @@ and open the template in the editor.
           <input placeholder="Email Address(optional)" type="text" name="email" tabindex="2" >
         </fieldset>
         <fieldset>
-          <input placeholder="Phone Number (optional)" type="tel" tabindex="3">
+          <input placeholder="Phone Number (optional)" type="text" name="telephone" tabindex="3">
         </fieldset>
         <fieldset>
           <input placeholder="Road Name" type="text" name="roadname" tabindex="1" required autofocus>

@@ -1,3 +1,5 @@
+<%@page import="java.io.FileWriter"%>
+<%@page import="java.io.BufferedWriter"%>
 <%@page import="RRTS.*"%>
 <%@ page import ="java.sql.*" %>
 <%
@@ -15,6 +17,59 @@
         int WATER_REQUIRED = Integer.parseInt(request.getParameter("water_required"));
         int LABOURERS_REQUIRED = Integer.parseInt(request.getParameter("labourers_required"));
         String Area = request.getParameter("area");
+        BufferedWriter writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/SAND_TRIPS_USED.txt"));
+        writer.write(String.valueOf(SAND_TRIPS_USED));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/CEMENT_USED.txt"));
+        writer.write(String.valueOf(CEMENT_USED));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/CEMENT_REQUIRED.txt"));
+        writer.write(String.valueOf(CEMENT_REQUIRED));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/SAND_TRIPS_REQUIRED.txt"));
+        writer.write(String.valueOf(SAND_TRIPS_REQUIRED));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/WATER_USED.txt"));
+        writer.write(String.valueOf(WATER_USED));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/LABOURERS_USED.txt"));
+        writer.write(String.valueOf(LABOURERS_USED));
+        writer.flush();
+        writer.close();
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/WATER_REQUIRED.txt"));
+        writer.write(String.valueOf(WATER_REQUIRED));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/LABOURERS_REQUIRED.txt"));
+        writer.write(String.valueOf(LABOURERS_REQUIRED));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/PercentDone.txt"));
+        writer.write(String.valueOf(PercentDone));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/ComplaintID.txt"));
+        writer.write(String.valueOf(ComplaintID));
+        writer.flush();
+        writer.close();
+        
+        writer = new BufferedWriter(new FileWriter("/home/rakesh/RRTS/Area.txt"));
+        writer.write(Area);
+        writer.flush();
+        writer.close();
         
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/RRTS?" + "user=root&password=temps510"); 
